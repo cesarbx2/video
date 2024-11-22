@@ -4,11 +4,7 @@ from wtforms import StringField, PasswordField, EmailField
 from wtforms.validators import DataRequired, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import login_user, LoginManager, login_required, current_user, logout_user
-import webview 
-import cv2
-import numpy as np
-import pyautogui
-import time
+
 
 
 db = SQLAlchemy()
