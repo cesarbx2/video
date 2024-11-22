@@ -7,3 +7,4 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.1
 Flask-WTF==1.2.2
+SQLAlchemy 2.0.36
