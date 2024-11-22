@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}My Dashboard{% endblock %}
+{% block content %}
+    <h1><b>Sejam Bem-Vindo</b> <br>{{ first_name }} {{ last_name }}</h1>
+    <hr>
+<!-- "Create or Join Meeting" button -->
+    <div class="create-meeting-button">
+        <div class="button-container">
+            <a class="btn btn-primary" href="{{ url_for('meeting') }}">Criar sala</a>
+            <a class="btn btn-primary" href="{{ url_for('join') }}">Entrar na sala</a>
+            <a class="btn btn-outline-light" href="{{ url_for('logout') }}">Sair</a>
+        </div>
+
+{% endblock %}

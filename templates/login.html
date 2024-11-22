@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+{% with message = get_flashed_messages() %}
+    {% if messages  %}
+    <div class="alert alert_sucess">
+        {{ messages | join('<br>') | safe }}
+    </div>
+    {% endif %}
+{% endwith %}
+
+
+<div class="mb-md-5 mt-md-4 pb-5">
+    <img src="https://cartorio24horas.com/gallery/Design%20sem%20nome3.gif?ts=1731592766">
+    <h2 class="fw-bold mb-2 txt-uppercase">Login</h2>
+
+    <form action="{{ url_for('login') }}" method="post">
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+        
+        {{ form.username.label }} {{ form.username(class="form-control form-control-lg", id="username")}}
+        <br>
+        {{ form.password.label }} {{ form.password(class="form-control form-control-lg", id="password")}}
+        <br>
+    
+    <button class="btn btn-outline-ligth btn-lg px-5" type="submit">Acessar</button>
+</form>
+<br><br>
+<div><p class="mb-0">Desejar criar sua conta ? <a href="register" class="text-white-50 fw-bold">Cadastra-se</a></p></div>
+
+</div>
+
+
+<!-- Final do formulario -->
+
+
+{% endblock %}
